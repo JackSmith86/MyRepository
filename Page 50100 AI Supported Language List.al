@@ -3,7 +3,7 @@ page 50100 "AI Supported Language"
     PageType = List;
     SourceTable = "AI Supported Language";
     Editable = false;
-    SourceTableView = sorting ("LG Code") order (ascending);
+    SourceTableView = sorting ("LG Code") order (descending);
 
     layout
     {
