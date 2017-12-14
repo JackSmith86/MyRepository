@@ -1,9 +1,9 @@
 {
   "id": "d6608c36-f6cc-4fff-8636-b4fb9725a536",
-  "name": "MyProject",
-  "publisher": "Default publisher",
+  "name": "AI Translator",
+  "publisher": "Dmitry Katson",
   "brief": "",
-  "description": "Al Language",
+  "description": "AI Language",
   "version": "0.0.0.1",
   "compatibilityId": "0.0.0.1",
   "privacyStatement": "",

@@ -2,8 +2,6 @@ page 50100 "AI Supported Language"
 {
     PageType = List;
     SourceTable = "AI Supported Language";
-    Editable = false;
-    SourceTableView = sorting ("LG Code") order (descending);
 
     layout
     {
@@ -11,7 +9,7 @@ page 50100 "AI Supported Language"
         {    
             repeater(Group)
             {
-                field("LG Code";"LG Code")
+                field("Code";"Code")
                 {
                     ApplicationArea = All;
                 }
@@ -27,10 +25,4 @@ page 50100 "AI Supported Language"
         }
     }
 
-    actions
-    {
-        area(processing)
-        {           
-        }
-    }
 }
