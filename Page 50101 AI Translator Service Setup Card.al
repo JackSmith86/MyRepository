@@ -2,18 +2,16 @@ page 50101 "AI Translator Service Setup"
 {
     PageType = Card;
     SourceTable = "AI Translator Service Setup";
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
         area(content)
         {
-            group(Group)            
+            group(General)            
             {
-                field("ST Code";"ST Code")
-                {
-                    ApplicationArea = All;
-                }
-                field("UL Setup";"UL Setup")
+                field("URL";"URL")
                 {
                     ApplicationArea = All;
                 }
@@ -25,25 +23,34 @@ page 50101 "AI Translator Service Setup"
     {
         area(processing)
         {
-            action(OpenAlSupportedLanguage)
+            Action(AILanguage)
             {
-                CaptionML = ENU = 'Open Al Supported Language';
-                ToolTipML = ENU = 'Open Al Supported Language List';
-                Promoted = true;
+                CaptionML = ENU = 'Supported Languages';
+                RunObject = Page "AI Supported Language";
+                Promoted = True;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 PromotedOnly = true;
-                Image = "Action";
-                ApplicationArea = All;
-
+                ApplicationArea  = All;
+                Image = Language;
                 trigger OnAction();
                 begin
-                    Page.Run(50100);
                 end;
             }
         }
     }
     
-    var
-        myInt : Integer;
+    trigger
+    OnOpenPage();
+    begin
+        CreateSetupRecord;
+    end;
+
+    procedure CreateSetupRecord()
+    begin
+        RESET;
+        if not Get then
+            Insert;
+    end;
+
 }

@@ -1,9 +1,10 @@
 table 50100 "AI Supported Language"
 {
+    CaptionML = ENU = 'AI Supported Language';
 
     fields
     {
-        field(1;"LG Code";Code [20])
+        field(1;"Code";Code [20])
         {
             CaptionML = ENU = 'LG Code';
             AccessByPermission = tabledata "Item" = R;
@@ -16,29 +17,10 @@ table 50100 "AI Supported Language"
 
     keys
     {
-        key(PK;"LG Code")
+        key(PK;Code)
         {
             Clustered = true;
         }
     }
     
-    var
-        myInt : Integer;
-
-    trigger OnInsert();
-    begin
-    end;
-
-    trigger OnModify();
-    begin
-    end;
-
-    trigger OnDelete();
-    begin
-    end;
-
-    trigger OnRename();
-    begin
-    end;
-
 }

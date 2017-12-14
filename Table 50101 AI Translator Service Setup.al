@@ -1,44 +1,26 @@
 table 50101 "AI Translator Service Setup"
 {
+    CaptionML = ENU = 'Translator service setup';
 
     fields
     {
-        field(1;"ST Code";Code[20])
+        field(1;"Code";Code[20])
         {
-            CaptionML = ENU = 'ST Code';            
+            CaptionML = ENU = 'Code';            
         }
-        field(10;"UL Setup";Text[250])
+        field(10;URL;Text[250])
         {
-            CaptionML = ENU = 'UL';
+            CaptionML = ENU = 'URL';
         }
     
     }
 
     keys
     {
-        key(PK;"ST Code")
+        key(PK;"Code")
         {
             Clustered = true;
         }
     }
     
-    var
-        myInt : Integer;
-
-    trigger OnInsert();
-    begin
-    end;
-
-    trigger OnModify();
-    begin
-    end;
-
-    trigger OnDelete();
-    begin
-    end;
-
-    trigger OnRename();
-    begin
-    end;
-
 }
